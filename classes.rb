@@ -3,13 +3,18 @@ Classes
 =end
 
 class Animal
+	def set_noise(noise)
+		# instance variables '@'
+		@noise = noise
+	end
+
 	def make_noise
-		return "Moo!"
+		@noise
 	end
 end
 
-animal_1 = Animal.new()
-	puts animal_1.make_noise()
+cow = Animal.new()
+	puts cow.set_noise("Moo!")
 
-animal_2 = Animal.new()
-	puts animal_2.make_noise()
+duck = Animal.new()
+	puts duck.set_noise("Quack!")
