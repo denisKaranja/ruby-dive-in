@@ -9,9 +9,10 @@ class Animal
 	attr_reader :legs, :arms
 	attr_writer :height
 
-	def set_noise(noise)
-		# instance variables '@'
+	def initialize(noise, legs = 4, arms = 0)
 		@noise = noise
+		@legs = legs
+		@arms = arms
 	end
 
 	def get_noise()
@@ -20,14 +21,12 @@ class Animal
 
 end
 
-cow = Animal.new()
-	cow.set_noise("Moo!")
+cow = Animal.new("Moo!", 4, 2)
 	puts cow.get_noise()
 	cow.name = "Mooshkins"
 	puts "My name is #{cow.name}"
 	cow.color = "Black"
 	puts "And i am #{cow.color} in color"
 
-duck = Animal.new()
-	duck.set_noise("Quack!")
+duck = Animal.new("Quack!")
 	puts duck.get_noise()
