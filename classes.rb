@@ -8,3 +8,8 @@ class Animal
 	end
 end
 
+animal_1 = Animal.new()
+	puts animal_1.make_noise()
+
+animal_2 = Animal.new()
+	puts animal_2.make_noise()
