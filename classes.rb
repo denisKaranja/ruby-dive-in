@@ -13,6 +13,12 @@ class Animal
 		["Elephant", "Rhino", "Leopard", "Buffalo", "Honey barger", "Fox", "Wild Dog"]
 	end
 
+	def self.create_with_attr(noise, color)
+		animal = self.new(noise)
+		animal.color = color
+		return animal
+	end
+
 	def initialize(noise, legs = 4, arms = 0)
 		@noise = noise
 		@legs = legs
@@ -37,5 +43,8 @@ cow = Animal.new("Moo!", 4, 2)
 	cow.color = "Black"
 	puts "And i am #{cow.color} in color"
 
-duck = Animal.new("Quack!")
+duck = Animal.create_with_attr("Quack!" , "Brown")
 	puts duck.get_noise()
+	puts duck.color
+
+	
