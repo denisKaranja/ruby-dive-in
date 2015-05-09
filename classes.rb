@@ -8,13 +8,15 @@ class Animal
 		@noise = noise
 	end
 
-	def make_noise
+	def get_noise()
 		@noise
 	end
 end
 
 cow = Animal.new()
-	puts cow.set_noise("Moo!")
+	cow.set_noise("Moo!")
+	puts cow.get_noise()
 
 duck = Animal.new()
-	puts duck.set_noise("Quack!")
+	duck.set_noise("Quack!")
+	puts duck.get_noise()
