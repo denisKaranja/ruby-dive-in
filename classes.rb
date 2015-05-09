@@ -9,6 +9,10 @@ class Animal
 	attr_reader :legs, :arms
 	attr_writer :height
 
+	def self.species
+		["Elephant", "Rhino", "Leopard", "Buffalo", "Honey barger", "Fox", "Wild Dog"]
+	end
+
 	def initialize(noise, legs = 4, arms = 0)
 		@noise = noise
 		@legs = legs
@@ -20,6 +24,11 @@ class Animal
 	end
 
 end
+
+puts "\nAll available species"
+puts "---------------------"
+puts Animal.species()
+puts "---------------------\n\n"
 
 cow = Animal.new("Moo!", 4, 2)
 	puts cow.get_noise()
