@@ -9,8 +9,10 @@ class Animal
 	attr_reader :legs, :arms
 	attr_writer :height
 
+	@@species = ["Elephant", "Rhino", "Leopard", "Buffalo", "Honey barger", "Fox", "Wild Dog"]
+
 	def self.species
-		["Elephant", "Rhino", "Leopard", "Buffalo", "Honey barger", "Fox", "Wild Dog"]
+		@@species
 	end
 
 	def self.create_with_attr(noise, color)
@@ -37,14 +39,16 @@ puts Animal.species()
 puts "---------------------\n\n"
 
 cow = Animal.new("Moo!", 4, 2)
+	puts "Animal one --> Cow\n••••••••••••••••••••"
 	puts cow.get_noise()
 	cow.name = "Mooshkins"
 	puts "My name is #{cow.name}"
 	cow.color = "Black"
 	puts "And i am #{cow.color} in color"
+	puts "End\n\n"
 
 duck = Animal.create_with_attr("Quack!" , "Brown")
+	puts "Animal two --> Duck\n••••••••••••••••••••"
 	puts duck.get_noise()
 	puts duck.color
 
-	
