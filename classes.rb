@@ -48,6 +48,19 @@ class Cow < Animal
 	end
 end
 
+class Pig < Animal
+	def noise
+		"Hello, i am a pig. I Oink!!"
+	end
+
+	def color
+		"This pig's color is #{@color}"
+		super()
+	end
+
+end
+
+
 
 
 puts "\nAll available species"
@@ -71,6 +84,10 @@ duck = Animal.create_with_attr("Quack!" , "Brown")
 
 
 maisie = Cow.create_with_attr("Moooo", "Black && White")
-puts maisie.get_noise()
-puts maisie.color()
+	puts maisie.get_noise()
+	puts maisie.color()
+
+pigie = Pig.create_with_attr("Oink", "Pink")
+	puts pigie.noise()
+	puts pigie.color()
 
