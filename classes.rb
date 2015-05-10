@@ -5,7 +5,6 @@ Classes
 class Animal
 	#getters and setters
 	attr_accessor :name
-	attr_accessor :color
 	attr_reader :legs, :arms
 	attr_writer :height
 
@@ -32,11 +31,21 @@ class Animal
 		@noise
 	end
 
+	def color=(color)
+		@color = color
+	end
+
+	def color
+		"The color is #{@color}" 
+	end
+
 end
 
 #inheritance
 class Cow < Animal
-
+	def color
+		"This cow's color is #{@color}"
+	end
 end
 
 
@@ -61,5 +70,7 @@ duck = Animal.create_with_attr("Quack!" , "Brown")
 	puts duck.color
 
 
-maisie = Cow.new("Moooo")
+maisie = Cow.create_with_attr("Moooo", "Black && White")
 puts maisie.get_noise()
+puts maisie.color()
+
