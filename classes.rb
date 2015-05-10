@@ -9,6 +9,7 @@ class Animal
 	attr_reader :legs, :arms
 	attr_writer :height
 
+	#class instance
 	@@species = ["Elephant", "Rhino", "Leopard", "Buffalo", "Honey barger", "Fox", "Wild Dog"]
 
 	def self.species
@@ -33,6 +34,13 @@ class Animal
 
 end
 
+#inheritance
+class Cow < Animal
+
+end
+
+
+
 puts "\nAll available species"
 puts "---------------------"
 puts Animal.species()
@@ -52,3 +60,6 @@ duck = Animal.create_with_attr("Quack!" , "Brown")
 	puts duck.get_noise()
 	puts duck.color
 
+
+maisie = Cow.new("Moooo")
+puts maisie.get_noise()
